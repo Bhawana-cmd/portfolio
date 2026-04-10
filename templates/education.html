@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Education Hero -->
+<section class="education-hero">
+    <div class="container">
+        <h1 class="education-title">Education</h1>
+        <p class="education-subtitle">My academic journey and learning achievements</p>
+    </div>
+</section>
+
+<!-- Education Content -->
+<section class="education-section">
+    <div class="container">
+        <div class="education-grid">
+            {% for edu in resume.education %}
+            <article class="education-card">
+                <div class="education-header">
+                    <h2 class="degree-title">{{ edu.degree }}</h2>
+                    <span class="education-year">{{ edu.year or edu.status or '' }}</span>
+                </div>
+                <p class="institution-name">{% if edu.institution %}{{ edu.institution }}{% elif edu.board %}{{ edu.board }}{% endif %}</p>
+                <div class="education-meta">
+                    <span class="meta-pill"><i class="fas fa-award"></i> {{ edu.marks }}</span>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

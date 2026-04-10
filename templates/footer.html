@@ -1,0 +1,29 @@
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> {{ resume.contact.email }}</p>
+            <p><i class="fas fa-phone"></i> {{ resume.contact.phone }}</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Social</h3>
+            <div class="social-links">
+                <a href="{{ resume.contact.linkedin }}" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; {{ resume.name }}. All rights reserved.</p>
+    </div>
+</footer>
+
